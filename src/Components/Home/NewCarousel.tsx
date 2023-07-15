@@ -19,19 +19,20 @@ import "./carousel.css";
 export default function NewCarousel() {
   return (
     <Swiper
-      effect={"grab"}
+      effect={"coverflow"}
+      slidesPerView={"auto"}
       grabCursor={true}
+      spaceBetween={10}
+      centeredSlides={true}
       autoplay={{
         delay: 500,
         disableOnInteraction: false,
       }}
-      centeredSlides={true}
-      slidesPerView={"auto"}
       coverflowEffect={{
-        rotate: 50,
+        rotate: 0,
         stretch: 0,
         depth: 50,
-        modifier: 1,
+        modifier: 5,
         slideShadows: true,
       }}
       navigation={true}
@@ -39,7 +40,7 @@ export default function NewCarousel() {
         clickable: true,
       }}
       modules={[EffectCoverflow, Pagination, Autoplay]}
-      className="mySwiper w-full"
+      className="mySwiper"
     >
       <SwiperSlide>
         <img src={slide_image_1} alt="" />
