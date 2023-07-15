@@ -1,5 +1,11 @@
+import Main from "./Layout/Main";
+
 function App() {
-  return <p className="bg-red-400 text-red-700">Welcome</p>;
+  return (
+    <div>
+      <Main />
+    </div>
+  );
 }
 
 export default App;
