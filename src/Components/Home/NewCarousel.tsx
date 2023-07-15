@@ -40,7 +40,7 @@ export default function NewCarousel() {
         clickable: true,
       }}
       modules={[EffectCoverflow, Pagination, Autoplay]}
-      className="mySwiper"
+      className="mySwiper border-red-500"
     >
       <SwiperSlide>
         <img src={slide_image_1} alt="" />

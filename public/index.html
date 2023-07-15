@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Responsive Website Template</title>
+  </head>
+
+  <body class="bg-gray-200">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white">
+      <div class="container mx-auto flex items-center justify-between py-4">
+        <a href="#" class="flex items-center">
+          <img src="logo.png" alt="Logo" class="h-8 w-8" />
+          <span class="text-xl font-bold ml-2">My Website</span>
+        </a>
+        <div class="hidden sm:block">
+          <div class="flex items-center space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white">Home</a>
+            <a href="#" class="text-gray-300 hover:text-white">About</a>
+            <a href="#" class="text-gray-300 hover:text-white">Products</a>
+            <a href="#" class="text-gray-300 hover:text-white">Contact</a>
+          </div>
+        </div>
+        <div class="sm:hidden">
+          <button
+            type="button"
+            class="text-gray-300 hover:text-white focus:outline-none"
+          >
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div class="hidden sm:hidden bg-gray-700">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#" class="text-gray-300 hover:text-white block">Home</a>
+          <a href="#" class="text-gray-300 hover:text-white block">About</a>
+          <a href="#" class="text-gray-300 hover:text-white block">Products</a>
+          <a href="#" class="text-gray-300 hover:text-white block">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Slider -->
+    <section class="h-64 bg-gray-400 flex items-center justify-center">
+      <h1 class="text-4xl text-white font-bold">Slider Section</h1>
+    </section>
+
+    <!-- Card Section -->
+    <section class="py-8">
+      <div class="container mx-auto">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        >
+          <!-- Card 1 -->
+          <div class="bg-white rounded-lg shadow-lg">
+            <img
+              src="product1.jpg"
+              alt="Product 1"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold mb-2">Product 1</h2>
+              <p class="text-gray-600">Description of Product 1</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white rounded-lg shadow-lg">
+            <img
+              src="product2.jpg"
+              alt="Product 2"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold mb-2">Product 2</h2>
+              <p class="text-gray-600">Description of Product 2</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white rounded-lg shadow-lg">
+            <img
+              src="product3.jpg"
+              alt="Product 3"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold mb-2">Product 3</h2>
+              <p class="text-gray-600">Description of Product 3</p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="bg-white rounded-lg shadow-lg">
+            <img
+              src="product4.jpg"
+              alt="Product 4"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-semibold mb-2">Product 4</h2>
+              <p class="text-gray-600">Description of Product 4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jumbotron -->
+    <section class="bg-indigo-500 py-16">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl text-white font-bold mb-4">Special Message</h2>
+        <p class="text-lg text-white">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto py-4">
+        <p class="text-center">&copy; 2023 My Website. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle mobile menu
+      const button = document.querySelector(".sm\\:hidden");
+      const menu = document.querySelector(".hidden.sm\\:block");
+
+      button.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
