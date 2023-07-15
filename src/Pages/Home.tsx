@@ -1,3 +1,9 @@
+import Carousel from "../Components/Home/Carousel";
+
 export default function Home() {
-  return <div className="bg-red-500">This is Home page</div>;
+  return (
+    <>
+      <Carousel />
+    </>
+  );
 }
