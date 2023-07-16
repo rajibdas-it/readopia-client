@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Card from "../Components/card";
+
 import { IBook } from "../Types/BookInterface";
+import Card from "../Components/Card";
 
 export default function Books() {
   const [books, setBooks] = useState<IBook[]>([]);

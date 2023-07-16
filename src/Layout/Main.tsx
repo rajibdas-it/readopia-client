@@ -1,5 +1,5 @@
 import Footer from "../shared/Footer";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Navbar from "../shared/Navbar";
 
 export default function Main() {
@@ -55,13 +55,13 @@ export default function Main() {
                   className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
                 >
                   <li>
-                    <a>Login</a>
+                    <Link to="/login">Login</Link>
                   </li>
                   <li>
-                    <a>Signup</a>
+                    <Link to="/signup">Signup</Link>
                   </li>
                   <li>
-                    <a className="justify-between">Add New Book</a>
+                    <Link to="/add-new-book">Add New Book</Link>
                   </li>
                   <li>
                     <a>Logout</a>
