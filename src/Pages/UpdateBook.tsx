@@ -1,15 +1,18 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   useAddBookMutation,
   useGetSingleBookQuery,
+  useUpdateBookMutation,
 } from "../Redux/features/book/bookApi";
 import { FormEvent, useState, ChangeEvent } from "react";
 
 export default function UpdateBook() {
   const { id } = useParams();
-  console.log("updateBook page", id);
+  const navigate = useNavigate();
+
   const { data } = useGetSingleBookQuery(id);
-  const [addBook, { isLoading, isError, error }] = useAddBookMutation();
+  const [updateBook, { isLoading, isError, error, isSuccess }] =
+    useUpdateBookMutation();
   console.log(isError);
   console.log(isLoading);
   console.log(error);
@@ -24,7 +27,7 @@ export default function UpdateBook() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const options = {
+    const data = {
       title,
       author,
       genre,
@@ -32,7 +35,12 @@ export default function UpdateBook() {
       imageUrl,
       createdBy: "rajibrad@gmail.com",
     };
+    const options = { id, data };
+    updateBook(options);
   };
+  if (isSuccess) {
+    navigate("/");
+  }
   return (
     <div className="hero w-full min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
