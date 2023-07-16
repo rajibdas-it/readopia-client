@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function BookDetails() {
   const { id } = useParams();
@@ -20,7 +20,9 @@ export default function BookDetails() {
             <p className="py-6">Descriptions:</p>
 
             <div className="flex gap-6 mt-5">
-              <button className="btn btn-primary">Update Book</button>
+              <Link to={`/update-book/${id}`}>
+                <button className="btn btn-primary">Update Book</button>
+              </Link>
               <button className="btn btn-secondary">Delete Book</button>
             </div>
           </div>

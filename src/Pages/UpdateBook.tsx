@@ -1,4 +1,4 @@
-export default function AddNewBook() {
+export default function UpdateBook() {
   return (
     <div className="hero w-full min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
