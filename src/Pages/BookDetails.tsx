@@ -1,8 +1,14 @@
 import { Link, useParams } from "react-router-dom";
+import { useGetSingleBookQuery } from "../Redux/features/book/bookApi";
 
 export default function BookDetails() {
   const { id } = useParams();
+  // console.log(id);
+  const { data, isLoading } = useGetSingleBookQuery(id);
 
+  console.log("bookdetails page", data);
+
+  console.log(isLoading);
   return (
     <div>
       {/* book details section  */}
@@ -13,10 +19,14 @@ export default function BookDetails() {
             className=" rounded-lg shadow-2xl"
           />
           <div>
-            <h1 className="text-5xl font-bold">Book Title:</h1>
-            <p className="py-6">Genre:</p>
-            <p className="py-6">Author:</p>
-            <p className="py-6">Publication Date: </p>
+            <h1 className="text-5xl font-bold">
+              Book Title: {data?.data?.title}{" "}
+            </h1>
+            <p className="py-6">Genre: {data?.data?.genre}</p>
+            <p className="py-6">Author: {data?.data?.author}</p>
+            <p className="py-6">
+              Publication Date: {data?.data?.publicationDate}{" "}
+            </p>
             <p className="py-6">Descriptions:</p>
 
             <div className="flex gap-6 mt-5">
