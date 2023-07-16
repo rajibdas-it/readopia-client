@@ -9,7 +9,6 @@ interface IProps {
 }
 
 export default function Card({ book }: IProps) {
-  console.log(book._id);
   return (
     <div className="card w-full bg-base-100 shadow-xl image-full p-2 cursor-pointer">
       <figure>

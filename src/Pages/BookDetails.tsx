@@ -1,14 +1,29 @@
-import { Link, useParams } from "react-router-dom";
-import { useGetSingleBookQuery } from "../Redux/features/book/bookApi";
+import { Link, useNavigate, useNavigation, useParams } from "react-router-dom";
+import {
+  useDeleteBookMutation,
+  useGetSingleBookQuery,
+} from "../Redux/features/book/bookApi";
+import { useEffect } from "react";
 
 export default function BookDetails() {
+  const currentUser = "rajibrad@gmail.com";
   const { id } = useParams();
   // console.log(id);
   const { data, isLoading } = useGetSingleBookQuery(id);
 
-  console.log("bookdetails page", data);
+  const [deleteBook, { isSuccess }] = useDeleteBookMutation(id);
 
-  console.log(isLoading);
+  const navigate = useNavigate();
+
+  console.log(data?.data?.createdBy);
+
+  console.log(isSuccess);
+  const handleDelete = () => {
+    deleteBook(id);
+  };
+  if (isSuccess) {
+    navigate("/");
+  }
   return (
     <div>
       {/* book details section  */}
@@ -29,12 +44,16 @@ export default function BookDetails() {
             </p>
             <p className="py-6">Descriptions:</p>
 
-            <div className="flex gap-6 mt-5">
-              <Link to={`/update-book/${id}`}>
-                <button className="btn btn-primary">Update Book</button>
-              </Link>
-              <button className="btn btn-secondary">Delete Book</button>
-            </div>
+            {data?.data?.createdBy === currentUser && (
+              <div className="flex gap-6 mt-5">
+                <Link to={`/update-book/${id}`}>
+                  <button className="btn btn-primary">Update Book</button>
+                </Link>
+                <button className="btn btn-secondary" onClick={handleDelete}>
+                  Delete Book
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
