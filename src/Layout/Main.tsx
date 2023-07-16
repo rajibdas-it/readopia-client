@@ -1,8 +1,20 @@
 import Footer from "../shared/Footer";
 import { Link, Outlet } from "react-router-dom";
 import Navbar from "../shared/Navbar";
+import { useAppDispatch, useAppSelector } from "../Redux/app/hook";
+import { auth } from "../firebase/firebase.config";
+import { signOut } from "firebase/auth";
+import { setIsLoading, setUser } from "../Redux/features/user/userSlice";
 
 export default function Main() {
+  const { user } = useAppSelector((state) => state.user);
+  const dispatch = useAppDispatch();
+
+  const handleLogout = () => {
+    signOut(auth);
+    dispatch(setUser(null));
+    dispatch(setIsLoading(false));
+  };
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
@@ -54,18 +66,25 @@ export default function Main() {
                   tabIndex={0}
                   className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
                 >
-                  <li>
-                    <Link to="/login">Login</Link>
-                  </li>
-                  <li>
-                    <Link to="/signup">Signup</Link>
-                  </li>
-                  <li>
-                    <Link to="/add-new-book">Add New Book</Link>
-                  </li>
-                  <li>
-                    <a>Logout</a>
-                  </li>
+                  {user.email ? (
+                    <>
+                      <li>
+                        <Link to="/add-new-book">Add New Book</Link>
+                      </li>
+                      <li onClick={handleLogout}>
+                        <a>Logout</a>
+                      </li>
+                    </>
+                  ) : (
+                    <>
+                      <li>
+                        <Link to="/login">Login</Link>
+                      </li>
+                      <li>
+                        <Link to="/signup">Signup</Link>
+                      </li>
+                    </>
+                  )}
                 </ul>
               </div>
             </div>
