@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { useAppSelector } from "../Redux/app/hook";
+import Loader from "../Components/ui/Loader";
 
 interface IProps {
   children: ReactNode;
@@ -11,7 +12,7 @@ export default function PrivateRoute({ children }: IProps) {
   const { user, isLoading } = useAppSelector((state) => state.user);
 
   if (isLoading) {
-    return <span className="loading loading-ring loading-lg"></span>;
+    return <Loader />;
   }
   if (user.email && !isLoading) {
     return children;

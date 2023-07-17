@@ -28,13 +28,14 @@ export default function Signup() {
                 <span className="label-text">Email</span>
               </label>
               <input
-                type="text"
+                type="email"
                 value={newUserEmail}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   setNewUserEmail(e.target.value)
                 }
                 placeholder="email"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -42,13 +43,14 @@ export default function Signup() {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="text"
+                type="password"
                 value={newUserPassword}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   setNewUserPassword(e.target.value)
                 }
                 placeholder="password"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -56,13 +58,13 @@ export default function Signup() {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="text"
+                type="password"
                 placeholder="password"
                 className="input input-bordered"
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button className="btn btn-primary">Signup</button>
               <div className="divider">OR</div>
               <button
                 className="btn btn-ghost btn-outline"

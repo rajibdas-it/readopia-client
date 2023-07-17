@@ -24,11 +24,10 @@ export default function Login() {
   };
 
   useEffect(() => {
-    if (user.email && !isLoading) {
+    if (user?.email && !isLoading) {
       navigate(from, { replace: true });
-      //
     }
-  }, []);
+  }, [user?.email, isLoading]);
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -39,13 +38,14 @@ export default function Login() {
                 <span className="label-text">Email</span>
               </label>
               <input
-                type="text"
+                type="email"
                 value={newUserEmail}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   setNewUserEmail(e.target.value)
                 }
                 placeholder="email"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
@@ -53,13 +53,14 @@ export default function Login() {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="text"
+                type="password"
                 value={newUserPassword}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   setNewUserPassword(e.target.value)
                 }
                 placeholder="password"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control mt-6">

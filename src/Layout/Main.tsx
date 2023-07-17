@@ -13,7 +13,7 @@ export default function Main() {
   const handleLogout = () => {
     signOut(auth);
     dispatch(setUser(null));
-    dispatch(setIsLoading(false));
+    // dispatch(setIsLoading(false));
   };
   return (
     <div className="drawer">

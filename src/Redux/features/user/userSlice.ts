@@ -77,8 +77,6 @@ export const userSlice = createSlice({
       .addCase(createUser.fulfilled, (state, action) => {
         state.isLoading = false;
         state.user.email = action.payload;
-        state.error = null;
-        state.isError = false;
       })
       .addCase(createUser.rejected, (state, action) => {
         state.isLoading = false;
