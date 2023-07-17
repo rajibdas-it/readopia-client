@@ -4,7 +4,7 @@ import Navbar from "../shared/Navbar";
 import { useAppDispatch, useAppSelector } from "../Redux/app/hook";
 import { auth } from "../firebase/firebase.config";
 import { signOut } from "firebase/auth";
-import { setIsLoading, setUser } from "../Redux/features/user/userSlice";
+import { setUser } from "../Redux/features/user/userSlice";
 
 export default function Main() {
   const { user } = useAppSelector((state) => state.user);
