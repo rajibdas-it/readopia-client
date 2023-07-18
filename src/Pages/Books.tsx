@@ -7,19 +7,37 @@ import Pagination from "../Components/Pagination";
 import { useAppSelector } from "../Redux/app/hook";
 
 export default function Books() {
-  const { page, genre, publicationYear, search } = useAppSelector(
+  const { genre, publicationYear, search } = useAppSelector(
     (state) => state.filtersData
   );
   // const filterOptions = { page, genre, publicationYear, search };
-  const { data } = useGetAllBooksQuery({
-    page,
-    genre,
-    publicationYear,
-    search,
-  });
+  const { data } = useGetAllBooksQuery(undefined);
 
-  // console.log(filterOptions);
+  let books = null;
 
+  if (search || genre || publicationYear) {
+    const searchValue = search?.toLowerCase();
+    console.log(searchValue, genre, publicationYear);
+    books = data?.data?.filter((book: any) => {
+      const titleValue = book?.title.toLowerCase();
+      const authorValue = book?.author.toLowerCase();
+      const genreValue = book?.genre.toLowerCase();
+      const yearValue = book?.publicationYear;
+
+      const genreFilterMatch =
+        genreValue === "" || genreValue === genre?.toLowerCase();
+      const yearFilterMatch = yearValue === "" || yearValue === publicationYear;
+      return (
+        titleValue.includes(searchValue) ||
+        authorValue.includes(searchValue) ||
+        genreValue.includes(searchValue) ||
+        genreFilterMatch ||
+        yearFilterMatch
+      );
+    });
+  } else {
+    books = data?.data;
+  }
   return (
     <div className="max-w-[1400px] mx-auto">
       <div className="flex justify-center lg:justify-end mt-5 gap-5">
@@ -31,7 +49,7 @@ export default function Books() {
         </div>
       </div>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5">
-        {data?.data?.map((book: IBook) => (
+        {books?.map((book: IBook) => (
           <Card key={book?._id} book={book} />
         ))}
       </div>

@@ -13,9 +13,7 @@ export default function PubYearOption() {
         className="select select-primary select-sm w-full max-w-xs"
         onChange={(e) => dispatch(setPublicationYear(e.target.value))}
       >
-        <option disabled selected>
-          Year
-        </option>
+        <option value="">Year</option>
         {data?.data?.map((gen: any) => (
           <option key={gen._id} value={gen?.publicationYear}>
             {gen?.publicationYear}

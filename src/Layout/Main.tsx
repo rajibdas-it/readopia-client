@@ -19,6 +19,7 @@ export default function Main() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(setSearchValue(searchValue));
+    setSearchValue("");
   };
   //console.log("after submit", searchValue);
 
@@ -72,7 +73,7 @@ export default function Main() {
                   />
                   <button
                     type="submit"
-                    className="btn btn-primary absolute top-0 right-0 rounded-l-none"
+                    className="btn btn-secondary absolute top-0 right-0 rounded-l-none"
                   >
                     <FaSearch />
                   </button>

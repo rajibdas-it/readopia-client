@@ -11,9 +11,7 @@ export default function GenreOption() {
         className="select select-primary select-sm w-full max-w-xs"
         onChange={(e) => dispatch(setGenreValue(e.target.value))}
       >
-        <option disabled selected>
-          Genre
-        </option>
+        <option value="">Genre</option>
         {data?.data?.map((gen: any) => (
           <option key={gen._id} value={gen?.genre}>
             {gen?.genre}

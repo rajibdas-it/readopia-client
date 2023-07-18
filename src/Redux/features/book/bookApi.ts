@@ -2,26 +2,26 @@ import { apiSlice } from "../../api/apiSlice";
 
 const bookApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
-    getAllBooks: builder.query({
-      query: ({ page, genre, publicationYear, search }) => {
-        const filterOption = { page, genre, publicationYear, search };
-        if (filterOption === null) {
-          return "/book";
-        } else {
-          const queryString = Object.entries(filterOption)
-            .filter(([key, value1]) => value1 !== null)
-            .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-            .join("&");
-
-          return queryString.length > 0 ? `book/${queryString}` : "/book";
-        }
-      },
-      providesTags: ["books"],
-    }),
     // getAllBooks: builder.query({
-    //   query: () => "/book",
+    //   query: ({ page, genre, publicationYear, search }) => {
+    //     const filterOption = { page, genre, publicationYear, search };
+    //     if (filterOption === null) {
+    //       return "/book";
+    //     } else {
+    //       const queryString = Object.entries(filterOption)
+    //         .filter(([key, value1]) => value1 !== null)
+    //         .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+    //         .join("&");
+
+    //       return queryString.length > 0 ? `book/${queryString}` : "/book";
+    //     }
+    //   },
     //   providesTags: ["books"],
     // }),
+    getAllBooks: builder.query({
+      query: () => "/book",
+      providesTags: ["books"],
+    }),
 
     getSingleBook: builder.query({
       query: (id) => `/book/${id}`,
