@@ -20,7 +20,7 @@ export default function UpdateBook() {
   const [author, setAuthor] = useState(data?.data?.author);
   const [genre, setGenre] = useState(data?.data?.genre);
   const [publishedDate, setPublishedDate] = useState(
-    data?.data?.publicationDate
+    data?.data?.publicationYear
   );
   const [imageUrl, setImageUrl] = useState(data?.data?.imageUrl);
 
@@ -30,7 +30,7 @@ export default function UpdateBook() {
       title,
       author,
       genre,
-      publicationDate: publishedDate,
+      publicationYear: publishedDate,
       imageUrl,
       createdBy: "rajibrad@gmail.com",
     };

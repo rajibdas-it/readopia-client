@@ -1,14 +1,26 @@
 import Footer from "../shared/Footer";
 import { Link, Outlet } from "react-router-dom";
 import Navbar from "../shared/Navbar";
+import { FaSearch } from "react-icons/fa";
 import { useAppDispatch, useAppSelector } from "../Redux/app/hook";
 import { auth } from "../firebase/firebase.config";
 import { signOut } from "firebase/auth";
 import { setUser } from "../Redux/features/user/userSlice";
+import { useState, FormEvent } from "react";
+import { setSearchValue } from "../Redux/features/filter/filterSlice";
 
 export default function Main() {
   const { user } = useAppSelector((state) => state.user);
   const dispatch = useAppDispatch();
+
+  const [searchValue, setSearchVlaue] = useState("");
+  console.log("before submit", searchValue);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    dispatch(setSearchValue(searchValue));
+  };
+  console.log("after submit", searchValue);
 
   const handleLogout = () => {
     signOut(auth);
@@ -40,7 +52,7 @@ export default function Main() {
               </label>
             </div>
             <div className="flex-1 px-2 mx-2 uppercase font-extrabold text-2xl">
-              Readopia
+              <Link to="/">Readopia</Link>
             </div>
             <div className="flex-none hidden lg:block">
               <ul className="menu menu-horizontal text-lg">
@@ -49,13 +61,32 @@ export default function Main() {
               </ul>
             </div>
             <div className="flex-none gap-2">
-              <div className="form-control">
+              <form className="form-control w-60" onSubmit={handleSubmit}>
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    value={searchValue}
+                    onChange={(e) => setSearchVlaue(e.target.value)}
+                    className="input input-bordered w-24 md:w-auto"
+                  />
+                  <button
+                    type="submit"
+                    className="btn btn-primary absolute top-0 right-0 rounded-l-none"
+                  >
+                    <FaSearch />
+                  </button>
+                </div>
+              </form>
+              {/* <form className="form-control" onSubmit={handleSubmit}>
                 <input
                   type="text"
                   placeholder="Search"
+                  value={searchValue}
+                  onChange={(e) => setSearchVlaue(e.target.value)}
                   className="input input-bordered w-24 md:w-auto"
                 />
-              </div>
+              </form> */}
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">

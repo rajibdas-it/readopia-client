@@ -1,163 +1,212 @@
 [
   {
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "genre": "Classic",
-    "shortDesc": "A classic novel set in the 1920s.",
-    "longDesc": "The Great Gatsby is a novel by F. Scott Fitzgerald that follows the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan.",
-    "publicationDate": "April 10, 1925"
-  },
-  {
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "genre": "Fiction",
-    "shortDesc": "A powerful story of racial injustice and moral growth.",
-    "longDesc": "To Kill a Mockingbird is a classic novel that addresses issues of racial inequality and moral development through the eyes of young Scout Finch.",
-    "publicationDate": "July 11, 1960"
+    "publicationYear": "1960",
+    "createdBy": "user1@example.com"
   },
   {
     "title": "1984",
     "author": "George Orwell",
     "genre": "Dystopian",
-    "shortDesc": "A chilling dystopian vision of the future.",
-    "longDesc": "1984 presents a grim vision of a totalitarian society ruled by a government that controls every aspect of its citizens' lives.",
-    "publicationDate": "June 8, 1949",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAPNjQYPHoceJKZx-ZOiguNK_-y6Hq6wlBgw&usqp=CAU"
+    "publicationYear": "1949",
+    "createdBy": "user2@example.com"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "publicationYear": "1925",
+    "createdBy": "user3@example.com"
   },
   {
     "title": "Pride and Prejudice",
     "author": "Jane Austen",
     "genre": "Romance",
-    "shortDesc": "A classic romance novel set in the 19th century.",
-    "longDesc": "Pride and Prejudice follows the story of Elizabeth Bennet and her complicated relationship with the wealthy Mr. Darcy.",
-    "publicationDate": "January 28, 1813"
-  },
-  {
-    "title": "The Lord of the Rings: The Fellowship of the Ring",
-    "author": "J.R.R. Tolkien",
-    "genre": "Fantasy",
-    "shortDesc": "A high-fantasy epic adventure.",
-    "longDesc": "The Fellowship of the Ring is the first volume of J.R.R. Tolkien's epic fantasy novel, The Lord of the Rings, set in the world of Middle-earth.",
-    "publicationDate": "July 29, 1954"
-  },
-  {
-    "title": "Harry Potter and the Philosopher's Stone",
-    "author": "J.K. Rowling",
-    "genre": "Fantasy",
-
-    "longDesc": "Harry Potter and the Philosopher's Stone introduces readers to the magical world of Hogwarts and follows the young wizard Harry Potter on his journey.",
-    "publicationDate": "June 26, 1997"
-  },
-  {
-    "title": "Brave New World",
-    "author": "Aldous Huxley",
-    "genre": "Dystopian",
-
-    "longDesc": "Brave New World is a dystopian novel that envisions a society where scientific and technological advancements control human life.",
-    "publicationDate": "January 17, 1932"
-  },
-  {
-    "title": "The Catcher in the Rye",
-    "author": "J.D. Salinger",
-    "genre": "Coming-of-age",
-
-    "longDesc": "The Catcher in the Rye follows the journey of Holden Caulfield as he navigates the complexities of adolescence and adulthood.",
-    "publicationDate": "July 16, 1951"
+    "publicationYear": "1813",
+    "createdBy": "user4@example.com"
   },
   {
     "title": "The Hobbit",
     "author": "J.R.R. Tolkien",
     "genre": "Fantasy",
-
-    "longDesc": "The Hobbit is a timeless adventure story that follows the journey of Bilbo Baggins as he embarks on an epic quest with a group of dwarves.",
-    "publicationDate": "September 21, 1937"
+    "publicationYear": "1937",
+    "createdBy": "user5@example.com"
   },
   {
-    "title": "Jane Eyre",
-    "author": "Charlotte Bronte",
-    "genre": "Gothic",
-
-    "longDesc": "Jane Eyre is a Gothic novel that explores themes of love, independence, and societal expectations.",
-    "publicationDate": "October 16, 1847"
-  },
-  {
-    "title": "The Hunger Games",
-    "author": "Suzanne Collins",
-    "genre": "Dystopian",
-
-    "longDesc": "The Hunger Games is a dystopian novel set in a post-apocalyptic world, where young tributes must fight to the death in a televised event.",
-    "publicationDate": "September 14, 2008"
-  },
-  {
-    "title": "The Da Vinci Code",
-    "author": "Dan Brown",
-    "genre": "Thriller",
-    "shortDesc": "A gripping thriller with art and religious symbolism.",
-    "longDesc": "The Da Vinci Code follows symbologist Robert Langdon as he unravels a mystery involving religious symbolism and art history.",
-    "publicationDate": "March 18, 2003"
-  },
-  {
-    "title": "The Alchemist",
-    "author": "Paulo Coelho",
-    "genre": "Fiction",
-    "shortDesc": "A philosophical and inspirational novel.",
-    "longDesc": "The Alchemist tells the story of Santiago, a shepherd boy who sets out on a journey to find his personal legend.",
-    "publicationDate": "1988"
-  },
-  {
-    "title": "The Picture of Dorian Gray",
-    "author": "Oscar Wilde",
-    "genre": "Gothic",
-    "shortDesc": "A dark and philosophical Gothic novel.",
-    "longDesc": "The Picture of Dorian Gray explores themes of hedonism, vanity, and morality through the story of a young man who remains eternally young while his portrait ages.",
-    "publicationDate": "June 20, 1890"
-  },
-  {
-    "title": "The Handmaid's Tale",
-    "author": "Margaret Atwood",
-    "genre": "Dystopian",
-    "shortDesc": "A chilling and thought-provoking dystopian novel.",
-    "longDesc": "The Handmaid's Tale is a speculative fiction novel that depicts a totalitarian society where fertile women are enslaved as childbearers.",
-    "publicationDate": "September 1985"
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "publicationYear": "1997",
+    "createdBy": "user6@example.com"
   },
   {
     "title": "Moby-Dick",
     "author": "Herman Melville",
     "genre": "Adventure",
-    "shortDesc": "An epic adventure of man versus nature.",
-    "longDesc": "Moby-Dick is a novel that tells the story of Captain Ahab's obsession with hunting the great white whale that took his leg.",
-    "publicationDate": "October 18, 1851"
+    "publicationYear": "1851",
+    "createdBy": "user7@example.com"
   },
   {
-    "title": "The Chronicles of Narnia: The Lion, the Witch, and the Wardrobe",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Coming-of-age",
+    "publicationYear": "1951",
+    "createdBy": "user8@example.com"
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "publicationYear": "1954",
+    "createdBy": "user9@example.com"
+  },
+  {
+    "title": "The Chronicles of Narnia",
     "author": "C.S. Lewis",
     "genre": "Fantasy",
-    "shortDesc": "A beloved fantasy classic for children and adults.",
-    "longDesc": "The Lion, the Witch, and the Wardrobe is the first book in The Chronicles of Narnia series, where children stumble into a magical land called Narnia.",
-    "publicationDate": "October 16, 1950"
+    "publicationYear": "1950",
+    "createdBy": "user10@example.com"
   },
   {
-    "title": "Frankenstein",
-    "author": "Mary Shelley",
-    "genre": "Gothic",
-    "shortDesc": "A seminal work of Gothic horror and science fiction.",
-    "longDesc": "Frankenstein explores themes of creation, ambition, and the consequences of playing god through the story of Dr. Victor Frankenstein and his monstrous creation.",
-    "publicationDate": "January 1, 1818"
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "genre": "Dystopian",
+    "publicationYear": "1953",
+    "createdBy": "user11@example.com"
   },
   {
-    "title": "The Shining",
-    "author": "Stephen King",
-    "genre": "Horror",
-    "shortDesc": "A haunting and suspenseful horror novel.",
-    "longDesc": "The Shining tells the story of a family trapped in a haunted and isolated hotel during the winter season.",
-    "publicationDate": "January 28, 1977"
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "publicationYear": "1932",
+    "createdBy": "user12@example.com"
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "genre": "Gothic fiction",
+    "publicationYear": "1890",
+    "createdBy": "user13@example.com"
+  },
+  {
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "genre": "Science fiction",
+    "publicationYear": "1979",
+    "createdBy": "user14@example.com"
+  },
+  {
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "genre": "Gothic fiction",
+    "publicationYear": "1847",
+    "createdBy": "user15@example.com"
   },
   {
     "title": "The Book Thief",
     "author": "Markus Zusak",
-    "genre": "Historical Fiction",
-    "shortDesc": "A poignant and beautifully written tale set in Nazi Germany.",
-    "longDesc": "The Book Thief is a historical fiction novel narrated by Death, following the story of a young girl who steals books to share with others during World War II.",
-    "publicationDate": "March 14, 2006"
+    "genre": "Historical fiction",
+    "publicationYear": "2005",
+    "createdBy": "user16@example.com"
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Fiction",
+    "publicationYear": "1988",
+    "createdBy": "user17@example.com"
+  },
+  {
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "genre": "Mystery",
+    "publicationYear": "2003",
+    "createdBy": "user18@example.com"
+  },
+  {
+    "title": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "genre": "Gothic fiction",
+    "publicationYear": "1847",
+    "createdBy": "user19@example.com"
+  },
+  {
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "genre": "Historical fiction",
+    "publicationYear": "2003",
+    "createdBy": "user20@example.com"
+  },
+  {
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "genre": "Science fiction",
+    "publicationYear": "2008",
+    "createdBy": "user21@example.com"
+  },
+  {
+    "title": "Gone with the Wind",
+    "author": "Margaret Mitchell",
+    "genre": "Historical fiction",
+    "publicationYear": "1936",
+    "createdBy": "user22@example.com"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "genre": "Philosophical fiction",
+    "publicationYear": "1866",
+    "createdBy": "user23@example.com"
+  },
+  {
+    "title": "The Old Man and the Sea",
+    "author": "Ernest Hemingway",
+    "genre": "Novella",
+    "publicationYear": "1952",
+    "createdBy": "user24@example.com"
+  },
+  {
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "genre": "Post-apocalyptic",
+    "publicationYear": "2006",
+    "createdBy": "user25@example.com"
+  },
+  {
+    "title": "The Metamorphosis",
+    "author": "Franz Kafka",
+    "genre": "Novella",
+    "publicationYear": "1915",
+    "createdBy": "user26@example.com"
+  },
+  {
+    "title": "The Handmaid's Tale",
+    "author": "Margaret Atwood",
+    "genre": "Dystopian",
+    "publicationYear": "1985",
+    "createdBy": "user27@example.com"
+  },
+  {
+    "title": "Siddhartha",
+    "author": "Hermann Hesse",
+    "genre": "Philosophical fiction",
+    "publicationYear": "1922",
+    "createdBy": "user28@example.com"
+  },
+  {
+    "title": "The Stranger",
+    "author": "Albert Camus",
+    "genre": "Philosophical fiction",
+    "publicationYear": "1942",
+    "createdBy": "user29@example.com"
+  },
+  {
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel García Márquez",
+    "genre": "Magical realism",
+    "publicationYear": "1967",
+    "createdBy": "user30@example.com"
   }
 ]

@@ -40,7 +40,7 @@ export default function BookDetails() {
             <p className="py-6">Genre: {data?.data?.genre}</p>
             <p className="py-6">Author: {data?.data?.author}</p>
             <p className="py-6">
-              Publication Date: {data?.data?.publicationDate}{" "}
+              Publication Date: {data?.data?.publicationYear}{" "}
             </p>
             <p className="py-6">Descriptions:</p>
 

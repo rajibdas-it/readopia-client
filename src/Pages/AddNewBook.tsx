@@ -10,8 +10,16 @@ export default function AddNewBook() {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [genre, setGenre] = useState("");
-  const [publishedDate, setPublishedDate] = useState("");
+  const [publicationYear, setPublicationYear] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+
+  const reset = () => {
+    setTitle("");
+    setAuthor("");
+    setGenre("");
+    setPublicationYear("");
+    setImageUrl("");
+  };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -19,11 +27,12 @@ export default function AddNewBook() {
       title,
       author,
       genre,
-      publicationDate: publishedDate,
+      publicationYear,
       imageUrl,
       createdBy: "rajibrad@gmail.com",
     };
     addBook(options);
+    reset();
   };
   return (
     <div className="hero w-full min-h-screen bg-base-200">
@@ -77,13 +86,13 @@ export default function AddNewBook() {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Publication Date</span>
+                <span className="label-text">Publication Year</span>
               </label>
               <input
                 type="text"
-                value={publishedDate}
+                value={publicationYear}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  setPublishedDate(e.target.value)
+                  setPublicationYear(e.target.value)
                 }
                 placeholder="publication date"
                 className="input input-bordered"
