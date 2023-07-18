@@ -7,9 +7,13 @@ import Pagination from "../Components/Pagination";
 import { useAppSelector } from "../Redux/app/hook";
 
 export default function Books() {
-  const { data } = useGetAllBooksQuery({});
+  const { page, genre, publicationYear, search } = useAppSelector(
+    (state) => state.filtersData
+  );
+  const filterOptions = { page, genre, publicationYear, search };
+  const { data } = useGetAllBooksQuery({ filterOptions });
 
-  console.log(useAppSelector((state) => state.filtersData));
+  // console.log(filterOptions);
 
   return (
     <div className="max-w-[1400px] mx-auto">

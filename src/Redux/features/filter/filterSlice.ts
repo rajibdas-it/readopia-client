@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface IFilter {
-  page: string | number;
+export interface IFilter {
+  page: string | number | null;
   search: string | null;
   genre: string | null;
   publicationYear: string | null;
 }
 
 const initialState: IFilter = {
-  page: 1,
+  page: null,
   search: null,
   genre: null,
   publicationYear: null,

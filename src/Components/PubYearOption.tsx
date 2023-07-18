@@ -17,7 +17,9 @@ export default function PubYearOption() {
           Year
         </option>
         {data?.data?.map((gen: any) => (
-          <option value={gen?.publicationYear}>{gen?.publicationYear}</option>
+          <option key={gen._id} value={gen?.publicationYear}>
+            {gen?.publicationYear}
+          </option>
         ))}
       </select>
     </div>

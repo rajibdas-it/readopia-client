@@ -14,13 +14,13 @@ export default function Main() {
   const dispatch = useAppDispatch();
 
   const [searchValue, setSearchVlaue] = useState("");
-  console.log("before submit", searchValue);
+  //console.log("before submit", searchValue);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(setSearchValue(searchValue));
   };
-  console.log("after submit", searchValue);
+  //console.log("after submit", searchValue);
 
   const handleLogout = () => {
     signOut(auth);
