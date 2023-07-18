@@ -3,7 +3,8 @@ import { apiSlice } from "../../api/apiSlice";
 const bookApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getAllBooks: builder.query({
-      query: ({ filterOption }) => {
+      query: ({ page, genre, publicationYear, search }) => {
+        const filterOption = { page, genre, publicationYear, search };
         if (filterOption === null) {
           return "/book";
         } else {

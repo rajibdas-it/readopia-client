@@ -10,8 +10,13 @@ export default function Books() {
   const { page, genre, publicationYear, search } = useAppSelector(
     (state) => state.filtersData
   );
-  const filterOptions = { page, genre, publicationYear, search };
-  const { data } = useGetAllBooksQuery({ filterOptions });
+  // const filterOptions = { page, genre, publicationYear, search };
+  const { data } = useGetAllBooksQuery({
+    page,
+    genre,
+    publicationYear,
+    search,
+  });
 
   // console.log(filterOptions);
 
